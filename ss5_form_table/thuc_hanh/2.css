@@ -1,0 +1,19 @@
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: left;
+    line-height: 50px;
+}
+tr {
+    border: #d7d6d3 1px solid;
+}
+th{
+    border: #d7d6d3 1px solid;
+}
+td{
+    border: #d7d6d3 1px solid;
+}
+tr:nth-child(odd) {
+    background-color: #5f6062;
+}
