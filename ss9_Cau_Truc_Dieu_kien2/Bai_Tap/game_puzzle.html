@@ -11,7 +11,7 @@
         }
         img{
             margin: 2px 2px;
-            height: 150px;
+            height: 140px;
         }
         body{
             width: 60%;
@@ -39,8 +39,6 @@
 
     function change(part) {
         let get_img = document.getElementById(`${part}`);
-        // let id = get_img.getAttribute('id');
-        // console.log(id);
         switch (part) {
             case 'part1':
                 if (get_img.getAttribute('src') === 'funny-cat1_part1x1.jpg') {
@@ -96,7 +94,7 @@
             part3.getAttribute('src') === 'funny-cat1_part3x1.jpg' &&
             part4.getAttribute('src') === 'funny-cat1_part4x1.jpg' &&
             part5.getAttribute('src') === 'funny-cat1_part5x1.jpg'){
-            alert('Đây chính xác là hình con mèo rồi!');
+            alert('got dammm mèo kìa!');
             document.getElementById("puzzle").style.boxShadow = '0 0 3px 3px green';
         }
         if (part1.getAttribute('src') === 'monkey_part1x1.jpg' &&
@@ -104,7 +102,7 @@
             part3.getAttribute('src') === 'monkey_part3x1.jpg' &&
             part4.getAttribute('src') === 'monkey_part4x1.jpg' &&
             part5.getAttribute('src') === 'monkey_part5x1.jpg'){
-            alert('Đây chính xác là hình con khỉ rồi!');
+            alert('oh men monkey kìa!');
             document.getElementById("puzzle").style.boxShadow = '0 0 3px 3px green';
         }
         if (part1.getAttribute('src') === 'panda_swap_part1x1.jpg' &&
@@ -112,7 +110,7 @@
             part3.getAttribute('src') === 'panda_swap_part3x1.jpg' &&
             part4.getAttribute('src') === 'panda_swap_part4x1.jpg' &&
             part5.getAttribute('src') === 'panda_swap_part5x1.jpg'){
-            alert('Đây chính xác là hình con gấu trúc rồi!');
+            alert('dammm panda kìa!');
             document.getElementById("puzzle").style.boxShadow = '0 0 3px 3px green';
         }
     }

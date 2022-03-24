@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+    let giuky = prompt("nhập điểm giữa kì: ");
+    let cuoiky = prompt("Nhập điểm cuối kỳ: ");
+
+    let sum = (giuky *2 + cuoiky *3)/5;
+    if (sum>= 8.5){
+        alert("học lực giỏi");
+    } else if(sum>= 6.5){
+        alert("học lực khá");
+    }else if(sum>=4.5){
+        alert("học lực trung bình");
+    }else {
+        alert("học lực yếu");
+    }
+
+</script>
+</body>
+</html>
