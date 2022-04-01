@@ -6,21 +6,21 @@
 </head>
 <body>
 <script>
-    let Num = Number(prompt('nhập số lương nguyên tố'));
-    let Count = 0;
-    let N = 2;
-    while (Count < Num) {
+    let num = Number(prompt('nhập số lương nguyên tố'));
+    let count = 0;
+    let n = 2;
+    while (count < num) {
         let a = 0;
-        for (let i = 1; i <= N; i++) {
-            if (N % i === 0) {
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
                 a++;
             }
         }
         if (a === 2) {
-            document.write(''+ N + 'là số nguyên tố' + '<br>');
-            Count++;
+            document.write(''+ n + 'là số nguyên tố' + '<br>');
+            count++;
         }
-        N++;
+        n++;
     }
 </script>
 </body>
