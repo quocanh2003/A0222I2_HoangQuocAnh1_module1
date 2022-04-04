@@ -5,24 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="engLish" placeholder="nhap tu dien">
-<input type="submit" onclick="tran()" value="Dịch">
+<label for="inputEng">Input:</label>
+<input id="inputEng" type="text">
+<button onclick="searchVN()">Search</button>
 <p id="result"></p>
 <script>
-    function tran() {
-        let x = document.getElementById('engLish').value;
-        let english = ["hi","bye"];
-        let vietnam = ["chào","tạm biệt"];
-        for (let i = 0; i < english.length; i++){
-            if (x === english[i]){
-                console.log(vietnam[i])
-                let a = vietnam[i];
-                document.getElementById('result').innerHTML = '' + a;
-            }else {
-                document.getElementById('result').innerHTML = 'Không tìm thấy kết quả';
-            }
+    let arrEng = ["people","hello","map"];
+    let arVN = ["con người", "xin chào", "bản đồ"];
+
+    function searchVN() {
+        let result = "";
+        let keyWord = document.getElementById("inputEng").value;
+        let index = arrEng.indexOf(keyWord);
+        if(index != -1){
+            result = arVN[index];
+        } else {
+            result = "Not found...."
         }
+        document.getElementById("result").innerText = result;
     }
+
 </script>
 </body>
 </html>
