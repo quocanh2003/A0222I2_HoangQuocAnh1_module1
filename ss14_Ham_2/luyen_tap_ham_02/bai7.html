@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    //Bài 7: Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó
+    function change(num1,num2) {
+        let temp = num1;
+        num1 = num2;
+        num2 = temp;
+        document.write('Number 1 sau khi chuyển = ' + num1 + '<br/>');
+        document.write('Number 2 sau khi chuyển = ' + num2 + '<br/>');
+    }
+    let a = Number(prompt('Nhập number 1 = '));
+    let b = Number(prompt('Nhập number 2 = '))
+    document.write('Number 1 trước khi chuyển = ' + a + '<br/>');
+    document.write('Number 2 trước khi chuyển = ' + b + '<br/>');
+    change(a,b);
+</script>
 </body>
 </html>

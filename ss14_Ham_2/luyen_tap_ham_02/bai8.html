@@ -5,6 +5,31 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    //Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    function daoViTri(x) {
+        let first = 0;
+        let last = x.length - 1;
+        while (first < last) {
+            let b = x[first];
+            x[first] = x[last];
+            x[last] = b;
+            first++;
+            last--;
+        }
+        return x;
+    }
 
+    let lengthArray = parseInt(prompt('Nhập đồ dài của mảng = '));
+    while (lengthArray > 10 || lengthArray < 1){
+        lengthArray = parseInt(prompt('Nhập đồ dài của mảng = '));
+    }
+    let array = [];
+    for (let i = 0; i < lengthArray; i++){
+        array[i] = parseInt(prompt('Nhập phần tử a['+ i +']' ));
+    }
+    document.write('Mảng trước khi đảo vị trí : ' + array.join() + '<br/>');
+    document.write('Mảng sau khi đảo vị trí : ' + daoViTri(array).join());
+</script>
 </body>
 </html>

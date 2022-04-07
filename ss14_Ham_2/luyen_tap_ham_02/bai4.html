@@ -5,6 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    //Bài 4: Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+    // Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+    let num = '0123456789';
+    function checkNum(x) {
+        if(num.includes(x)) {
+            return true;
+        }
+    }
+    let a = prompt('Nhập ký tự bất kỳ');
+    if(checkNum(a)){
+        document.write('Ký tự nhập vào là ký tự số');
+    }else {
+        document.write('Ký tự nhập vào không phải là ký tự số');
+    }
+</script>
 </body>
 </html>
