@@ -6,18 +6,27 @@
 </head>
 <body>
 <script>
-    let s1 = "aabcc";
-    let s2 = "adcaa";
-
-    let count =0;
-    for (let i = 0; i < s1.length; i++) {
-        let j = s2.indexOf(s1[i]);
-        if (j >= 0) {
-            count++;
-            s2 = s2.replace(s1[i], '');
+    function commonCharacterCount(s1, s2) {
+        let arr1 = s1.split("");
+        let arr2 = s2.split("");
+        let count = 0;
+        for (let i = 0; i < arr1.length; i++){
+            for (let j = 0; j < arr2.length; j++){
+                if (arr1[i] === arr2[j]){
+                    count++;
+                    arr1.splice(i, 1);
+                    arr2.splice(j, 1);
+                    i--;
+                    break;
+                }
+            }
         }
+        return count;
     }
-    document.write("kết quả (s1, s2) = " +count);
+
+    let s1 = prompt("Nhập vào chuỗi 1 ");
+    let s2 = prompt("Nhập vào chuỗi 2");
+    alert("Số lượng ký tự giống nhau giữa 2 xâu là: " + commonCharacterCount(s1,s2));
 </script>
 </body>
 </html>

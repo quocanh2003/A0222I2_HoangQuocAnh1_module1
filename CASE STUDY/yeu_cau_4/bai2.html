@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    function differentSymbolsNaive(str){
+    function differentSymbolsNaive(str) {
         let arr = [];
-        for(let i=0; i<str.length; i++){
-            if(arr.indexOf(str.charAt(i))===-1){
+        for (let i = 0; i < str.length; i++){
+            if (arr.indexOf(str.charAt(i)) === -1){
                 arr.push(str.charAt(i));
             }
         }
         return arr.length;
     }
-    let str = prompt("nhập vào xâu ký tự");
-    alert("có " + differentSymbolsNaive(str) + " ký tự");
+
+    let str = prompt("Nhập vào xâu ký tự ");
+    alert("Có " + differentSymbolsNaive(str) + " kí tự khác nhau");
 </script>
 </body>
 </html>
